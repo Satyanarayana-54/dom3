@@ -5,134 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<style>
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    padding: 2%;
-    position: sticky;
-    top: 0;
-}
-nav{
-    margin-right: 5%;
-  
-}
-ul{
-    display: flex;
-    gap: 20%;
-   list-style: none;
-}
-h3{
-    padding-left:2%;
-}
-.parent{
-    display: grid;
-    grid-template-columns: auto auto auto auto ;
-    /* justify-content: space-around; */
-    margin-top: 3%;
-}
-.parent1{
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    justify-content: space-evenly;
-    margin-top: 5%;
-}
-.imgcls{
-    margin-top: 5%;
-}
-.heading3{
-    color: gray;
-}
-.footer{
-    background-color: black;
-    color: white;
-    height: 10vh;
-    margin-top: 3%;
-}
-.footer>h3{
-    padding-left: 40%;
-    padding-top: 2%;
-}
-
-</style>
 <body>
-    <script>
-        var header=document.createElement("header")
-        console.log(header)
-        var architect=document.createElement("h3")
-        architect.innerHTML="<b> BR </b> Architect"
-        var nav=document.createElement("nav")
-       nav.innerHTML="<ul><li><h3>Projects</h3></li> <li><h3>About</h3></li> <li><h3>Contact</h3></li>"
-        var section1=document.createElement("section")
-        console.log(section1)
-        var img1=document.createElement("img")
-        img1.setAttribute("src","https://www.w3schools.com/w3images/architect.jpg")
-        section1.append(img1)
-        var project=document.createElement('h2')
-        console.log(project)
-        project.innerText=("Project")
- var container=document.createElement("div")
-        console.log(container)
-        var imageArray=["https://www.w3schools.com/w3images/house5.jpg","https://www.w3schools.com/w3images/house2.jpg","https://www.w3schools.com/w3images/house3.jpg", "https://www.w3schools.com/w3images/house4.jpg","https://www.w3schools.com/w3images/house2.jpg","https://www.w3schools.com/w3images/house5.jpg","https://www.w3schools.com/w3images/house4.jpg","https://www.w3schools.com/w3images/house3.jpg", "https://www.w3schools.com/w3images/house5.jpg"]
-        var paraArray=["<h3>Summer House</h3>", "<h3>Brick House</h3>", "<h3>Renovated</h3> ", "<h3>Barn House</h3>", "<h3>Summer House</h3>", "<h3>Brick House</h3>", "<h3>Renovated</h3>", "<h3>Barn House</h3>"] 
-        for(i=0; i<=7;i++){
-        var child=document.createElement("div")
-        // console.log(child)
-        var img2=document.createElement("img")
-        // console.log(img2)
-        img2.setAttribute("src",imageArray[i])
-        img2.setAttribute("width", "80%")
-        img2.setAttribute("height", "80%")
-        var para=document.createElement("p")
-        // console.log(para)
-        para.innerHTML=paraArray[i]
-        child.append(img2,para)
-        container.append(child)
-        }
-        var about=document.createElement("h2")
-        // console.log(about)
-        about.innerText="About"
-        var about_content=document.createElement("p")
-        // console.log(about_content)
-        about_content.innerText="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-       //card section2 creation
-       var container1=document.createElement("div")
-       console.log(container1)
-       var text1Array=["John Doe", "Rosy Doe", "Mike Ross", "Don Star"]
-       var text2Array=["CEO & Founder", "Architect", "Architect", "Architect"]
-        var img3Array=["https://www.w3schools.com/w3images/team2.jpg", "https://www.w3schools.com/w3images/team1.jpg", "https://www.w3schools.com/w3images/team3.jpg", "https://www.w3schools.com/w3images/team4.jpg"]
-      for(i=0;i<=3; i++){
-       var child1=document.createElement("div")
-    //    console.log(child1)
-       var img3=document.createElement("img")
-    //    console.log(img3)
-       img3.setAttribute("src", img3Array[i]);
-       img3.setAttribute("width", "90%")
-       img3.setAttribute("height", "70%")
-       var text1=document.createElement("h2")
-    //    console.log(text1)
-       text1.innerText=text1Array[i]
-       var text2=document.createElement("h3")
-       text2.classList.add("heading3")
-    //    console.log(text2)
-       text2.innerText=text2Array[i]
-       child1.append(img3,text1,text2)
-       container1.append(child1)
-      }
-      container1.classList.add("parent1")
-      container.classList.add("parent")
-      var img4=document.createElement("img")
-      console.log(img4)
-      img4.setAttribute("src", "https://www.w3schools.com/w3images/map.jpg")
-      img4.classList.add("imgcls")
-      var bottom=document.createElement("footer")
-      console.log(bottom)
-      bottom.innerHTML="<h3>Develope by satyanarayana using DOM</h3>"
-      bottom.classList.add("footer")
-      header.append(architect,nav)
-      document.body.append(header,section1,project,container,about,about_content,container1,img4,bottom)
-    </script>
+    
+<script>
+    var img1 = document.createElement("img")
+
+    document.body.append(img1)
+
+    var btn = document.createElement("button")
+    btn.innerText=("html")
+    document.body.append(btn)
+
+    var btn1 = document.createElement("button")
+    btn1.innerText=("css")
+    document.body.append(btn1)
+
+    var btn2 = document.createElement("button")
+    btn2.innerText=("javascript")
+    document.body.append(btn2)
+
+    var btn3 = document.createElement("button")
+    btn3.innerText=("react")
+    document.body.append(btn3)
+
+    btn.addEventListener("click",function()
+{
+    img1.src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20220630132824/HTML-Full-Form.jpg"
+})
+btn1.addEventListener("click",function(){
+    img1.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx23Ay7DJERV_HeW-VEVoj34SL_HYIGdkdRQ&s"
+})
+btn2.addEventListener("click",function(){
+    img1.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAXaZgOP8Dt5J05vGncrxXkY6VJKoi1_lsFw&s"
+})
+btn3.addEventListener("click",function(){
+    img1.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ5SAXMVw9GlgSCYmwG-Nf_-fRfC94k0W7pw&s"
+})
+    
+
+</script>
 </body>
 </html>
