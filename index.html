@@ -3,66 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator using DOM</title>
+    <title>Document</title>
 </head>
 <body>
-
-    <form>
-        <input type="number" id="num1" placeholder="Enter a number">
-        <input type="number" id="num2" placeholder="Re-enter a number">
-    </form><br>
-
-    <button id="add">Add</button>
-    <button id="sub">Subtract</button>
-    <button id="mul">Multiply</button>
-    <button id="div">Divide</button>
-
-    <p>Result: <span id="result">0</span></p>
-
     <script>
-        
-        var num1 = document.getElementById("num1");
-        var num2 = document.getElementById("num2");
-        var resultDisplay = document.getElementById("result");
+    let favoriteMovies = [];
+favoriteMovies.push("Inception");
+favoriteMovies.push("The Matrix");
+favoriteMovies.push("Interstellar");
+favoriteMovies.push("The Dark Knight");
+favoriteMovies.push("Pulp Fiction");
 
-        function getValues() {
-            return {
-                value1: parseFloat(num1.value),
-                value2: parseFloat(num2.value)
-            };
-        }
+console.log("Using for loop:");
+for (let i = 0; i < favoriteMovies.length; i++) {
+  console.log(favoriteMovies[i]);
+}
+console.log("\nUsing for...in loop:");
+for (let index in favoriteMovies) {
+  console.log(favoriteMovies[index]);
+}
 
-        
-        function calculate(operation) {
-            const { value1, value2 } = getValues();
+console.log("\nUsing for...of loop:");
+for (let movie of favoriteMovies) {
+  console.log(movie);
+}
+  
+  let favoriteMovies1 = ["Inception", "The Matrix", "Interstellar", "The Dark Knight", "Pulp Fiction"];
 
-            let result;
-            switch (operation) {
-                case "add":
-                    result = value1 + value2;
-                    break;
-                case "sub":
-                    result = value1 - value2;
-                    break;
-                case "mul":
-                    result = value1 * value2;
-                    break;
-                case "div":
-                    result = value2 !== 0 ? value1 / value2 : "Cannot divide by zero!";
-                    break;
-            }
+// Remove the first element
+const firstMovie = favoriteMovies1.shift();
+console.log(`Removed first movie: ${firstMovie}`); 
 
-            resultDisplay.textContent = result;
-        }
-         
-         document.getElementById("add").addEventListener("click", () => calculate("add"));
-        document.getElementById("sub").addEventListener("click", () => calculate("sub"));
-        document.getElementById("mul").addEventListener("click", () => calculate("mul"));
-        document.getElementById("div").addEventListener("click", () => calculate("div"));
+const lastMovie = favoriteMovies1.pop();
+console.log(`Removed last movie: ${lastMovie}`); 
 
-       
+console.log(favoriteMovies1); 
 
-    </script>
- 
+let originalArray = [1, 2, 3, 4, 5];
+let reversedArray = [];
+
+for (let i = originalArray.length - 1; i >= 0; i--) {
+  reversedArray.push(originalArray[i]);
+}
+
+console.log(reversedArray); // Outputs: [5, 4, 3, 2, 1]
+
+const number = [12, 3, 5, 6, 22, 56, 29];
+let evenSum = 0;
+let oddSum = 0;
+
+for (const num of number) {
+  if (num % 2 === 0) {
+    evenSum += num;
+  } else {
+    oddSum += num;
+  }
+}
+
+console.log(`Sum of even numbers: ${evenSum}`); 
+console.log(`Sum of odd numbers: ${oddSum}`);   
+
+let arr = ["apple", "banana", "mango", "banana", 3, 4, 5, 6, true, { name: "object" }];
+
+let strings = [];
+let numbers1 = [];
+let booleans = [];
+let objects = [];
+
+for (let i = 0; i < arr.length; i++) {
+  let item = arr[i];
+  let type = typeof item;
+
+  if (type === "string") {
+    strings.push(item);
+  } else if (type === "number") {
+    number.push(item);
+  } else if (type === "boolean") {
+    booleans.push(item);
+  } else if (type === "object") {
+    objects.push(item);
+  }
+}
+
+console.log("Strings:", strings);   
+console.log("Numbers:", number);   
+console.log("Booleans:", booleans); 
+console.log("Objects:", objects);   
+
+const favoriteSports = ["Basketball", "Soccer", "Tennis"];
+const favoriteHobbies = ["Reading", "Cooking", "Photography"];
+
+const combinedFavorites = favoriteSports.concat(favoriteHobbies);
+
+console.log(combinedFavorites);
+
+
+
+let numbers2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+console.log("Before splice:", numbers2);
+
+numbers2.splice(3, 3, 40, 50, 60);
+
+console.log("After splice:", numbers2);
+
+const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+console.log("Original array:", daysOfWeek);
+
+const weekdays = daysOfWeek.slice(1, 6);
+
+console.log("Weekdays array:", weekdays);
+
+
+const words = ["The", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog"];
+
+const sentence = words.join(" ");
+
+console.log(sentence); 
+
+
+
+const numbers = [40, 1, 5, 200];
+numbers.sort();
+console.log(numbers); 
+
+
+</script>
+
 </body>
 </html>
